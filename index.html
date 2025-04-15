@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boomerang Revenue</title>
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+  <div class="header-emoji">🏹</div>
+  <h1>Boomerang has achieved</h1>
+  <div class="revenue">1,00,00,000 in revenue</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function shootConfetti() {
+      const duration = 3 * 1000;
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+      const interval = setInterval(function () {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
+
+        confetti(Object.assign({}, defaults, {
+          particleCount: 5,
+          origin: { x: Math.random() < 0.5 ? 0 : 1, y: 1 }
+        }));
+      }, 250);
+    }
+
+    window.onload = shootConfetti;
+  </script>
+</body>
+</html>
