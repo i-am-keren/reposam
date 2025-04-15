@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.header-emoji {
+  font-size: 100px;
+  text-shadow:
+    -2px -2px 0 white,
+     2px -2px 0 white,
+    -2px  2px 0 white,
+     2px  2px 0 white;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.revenue {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
